@@ -47,5 +47,5 @@ ___
 - [x] 최종 우승자를 OutputView로 출력한다.
 ### 4. 예외 처리
 - [x] 자동차 이름이 5자를 초과하거나 빈 문자열인 경우 IllegalArgumentException 발생
-- [ ] 자동차 이름이 중복된 경우 IllegalArgumentException 발생
+- [x] 자동차 이름이 중복된 경우 IllegalArgumentException 발생
 - [ ] 시도 횟수가 양의 정수가 아닌 경우 IllegalArgumentException 발생

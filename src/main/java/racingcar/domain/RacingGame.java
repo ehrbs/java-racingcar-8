@@ -2,7 +2,9 @@ package racingcar.domain;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class RacingGame {
     private final List<Car> cars;
@@ -13,6 +15,7 @@ public class RacingGame {
 
     private List<Car> createCars(String carNames) {
         List<String> nameList = parseCarNames(carNames);
+        validateDuplicateNames(nameList);
         return convertToCars(nameList);
     }
 
@@ -20,6 +23,13 @@ public class RacingGame {
         return Arrays.stream(carNames.split(","))
                 .map(String::trim)
                 .toList();
+    }
+
+    private void validateDuplicateNames(List<String> nameList) {
+        Set<String> uniqueNames = new HashSet<>(nameList);
+        if (uniqueNames.size() != nameList.size()) {
+            throw new IllegalArgumentException("자동차 이름은 중복될 수 없습니다.");
+        }
     }
 
     private List<Car> convertToCars(List<String> nameList) {
