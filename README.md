@@ -42,9 +42,9 @@ ___
 
 ### 3. Controller
 #### RacingController (게임 컨트롤러)
-- [ ] InputView로부터 입력을 받아 RacingGame을 생성하고 실행한다.
-- [ ] 각 라운드 결과를 OutputView로 출력한다.
-- [ ] 최종 우승자를 OutputView로 출력한다.
+- [x] InputView로부터 입력을 받아 RacingGame을 생성하고 실행한다.
+- [x] 각 라운드 결과를 OutputView로 출력한다.
+- [x] 최종 우승자를 OutputView로 출력한다.
 ### 4. 예외 처리
 - [ ] 자동차 이름이 5자를 초과하거나 빈 문자열인 경우 IllegalArgumentException 발생
 - [ ] 자동차 이름이 중복된 경우 IllegalArgumentException 발생
