@@ -12,7 +12,23 @@ public class InputView {
     public int readAttemptCount() {
         System.out.println("시도할 횟수는 몇 회인가요?");
         String input = Console.readLine();
-        return Integer.parseInt(input);
+        return parseAttemptCount(input);
+    }
+
+    private int parseAttemptCount(String input) {
+        try {
+            int count = Integer.parseInt(input);
+            validatePositiveNumber(count);
+            return count;
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("시도 횟수는 숫자여야 합니다.");
+        }
+    }
+
+    private void validatePositiveNumber(int count) {
+        if (count <= 0) {
+            throw new IllegalArgumentException("시도 횟수는 양의 정수여야 합니다.");
+        }
     }
 }
 
